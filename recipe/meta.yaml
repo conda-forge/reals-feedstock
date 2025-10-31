@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "reals" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reals-{{ version }}.tar.gz
-  sha256: e435b8bd59454607ebca4b5b3032ca461e8c86e09c57ece68998fa96123f58a9
+  sha256: a981642415a2ebb676a95abb34683af58105511d3d27b8445d462d5f878522f5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
